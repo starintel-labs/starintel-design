@@ -6,3 +6,6 @@ result
 result-*
 .direnv/
 .DS_Store
+
+# prolog-verify local state (gate artifacts reference live tree state)
+.prolog/
