@@ -1,0 +1,34 @@
+name: starintel-design-ci
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  verify:
+    name: build, test, typecheck
+    runs-on: ubuntu-latest
+    container: docker.io/library/node:24-bookworm
+    steps:
+      - name: checkout
+        run: |
+          git config --global --add safe.directory "*"
+          git clone --no-checkout "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY" repo
+          cd repo
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --force "$GITHUB_SHA"
+          cd ..
+          mkdir -p "$GITHUB_WORKSPACE"
+          cp -a repo/. "$GITHUB_WORKSPACE"/
+      - name: pnpm
+        run: npm install --global pnpm@11.24.0
+      - name: install
+        run: pnpm install --frozen-lockfile
+      - name: build
+        run: pnpm build && node scripts/build-css.mjs --check
+      - name: test
+        run: pnpm test
+      - name: typecheck
+        run: pnpm typecheck
+      - name: showcase build
+        run: pnpm showcase:build

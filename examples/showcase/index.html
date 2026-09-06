@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en" data-si-theme="obsidian-gold">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0a08" />
+    <title>@starintel/design showcase — obsidian-gold</title>
+    <link rel="icon" href="/starintel-mark.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="si-skip-link" href="#main">skip to content</a>
+
+    <header class="si-topbar">
+      <a class="si-topbar__brand" href="#" aria-label="StarIntel design showcase" data-wordmark></a>
+      <nav class="si-topbar__nav" aria-label="Showcase sections">
+        <a href="#tokens" aria-current="page">tokens</a>
+        <a href="#typography">type</a>
+        <a href="#components">components</a>
+        <a href="#states">states</a>
+        <a href="#forms">forms</a>
+        <a href="#graphs">graphs</a>
+      </nav>
+    </header>
+
+    <main id="main" class="si-scanlines">
+      <!-- Hero -->
+      <section class="si-shell si-hero">
+        <div class="si-hero__grid">
+          <div>
+            <p class="si-hero__kicker">@starintel/design · obsidian-gold · v0.1</p>
+            <h1 class="si-hero__title"><span data-wordmark-lg></span></h1>
+            <p class="si-hero__lede">
+              The canonical visual reference for the StarIntel design system. Black canvas,
+              structural gold, ivory text. Every component, state, and token an agent may use —
+              rendered by the real stylesheet, not a mockup.
+            </p>
+            <div class="si-hero__actions">
+              <a class="si-btn si-btn--primary" href="#components">browse components</a>
+              <a class="si-btn" href="#tokens">inspect tokens</a>
+            </div>
+            <p class="si-hero__tech">
+              framework-independent<span class="sep">·</span>
+              css custom properties<span class="sep">·</span>
+              lambda identity
+            </p>
+          </div>
+          <div class="si-hero__visual si-graphframe">
+            <span class="si-graphframe__corner si-graphframe__corner--tl">fig. 01 — symbolic network</span>
+            <span class="si-graphframe__corner si-graphframe__corner--br">obsidian-gold</span>
+            <img src="/lambda-network.svg" alt="Lambda term bound to typed document, actor, evidence, claim, relation, and source nodes" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Tokens: color -->
+      <section class="si-band" id="tokens">
+        <div class="si-shell si-section">
+          <div class="si-section__head">
+            <h2 class="si-section__title">Color tokens</h2>
+            <span class="faint mono" style="font-size:0.8rem">semantic, never raw hex</span>
+          </div>
+          <div class="si-grid si-grid--quad" id="swatches"></div>
+          <div class="si-panel" style="margin-top:1rem">
+            <div class="si-metric">
+              <span class="si-metric__label">spacing scale</span>
+              <div id="spacing-scale" style="display:flex;align-items:flex-end;gap:0.6rem;margin-top:0.5rem"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typography -->
+      <section class="si-band" id="typography">
+        <div class="si-shell si-section">
+          <div class="si-section__head">
+            <h2 class="si-section__title">Typography</h2>
+            <span class="faint mono" style="font-size:0.8rem">mono for structure · ivory for prose</span>
+          </div>
+          <div class="si-grid si-grid--2">
+            <div class="si-panel">
+              <p class="si-hero__kicker" style="margin-bottom:0.8rem">kicker · mono · 0.78rem · 0.22em</p>
+              <h1 style="font-size:2.2rem">Heading one</h1>
+              <h2 style="font-size:1.6rem">Heading two</h2>
+              <h3 style="font-size:1.2rem">Heading three</h3>
+              <p>Body text in the sans stack. StarIntel is a document-driven intelligence
+              platform: typed documents, actor orchestration, and approval-gated publishing.</p>
+              <p class="lead">Lead paragraph: slightly larger secondary ivory for ledes.</p>
+              <p class="muted">Muted supporting text. <span class="faint">Faint metadata text.</span>
+              <span class="gold">Gold emphasis is rare.</span></p>
+            </div>
+            <div class="si-panel">
+              <p class="mono" style="font-size:0.8rem;color:var(--si-text-muted);margin-top:0">
+                serif long-form (org export) —
+              </p>
+              <div class="si-org" style="max-width:none">
+                <p>Long-form research prose uses the serif measure at 46rem. Inline code like
+                <code>documents.ingest.#</code> renders in the mono gold-function tone.</p>
+                <blockquote>Blockquote: approval gates are recorded, with evidence, before publication.</blockquote>
+                <ul>
+                  <li>List marker in gold</li>
+                  <li>Serif body, 1.75 leading</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Components -->
+      <section class="si-band" id="components">
+        <div class="si-shell si-section">
+          <div class="si-section__head">
+            <h2 class="si-section__title">Components</h2>
+            <span class="faint mono" style="font-size:0.8rem">.si-* classes are the contract</span>
+          </div>
+
+          <h3>Buttons</h3>
+          <div class="si-panel" style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1rem">
+            <button class="si-btn si-btn--primary">primary action</button>
+            <button class="si-btn">default</button>
+            <button class="si-btn si-btn--ghost">ghost</button>
+            <button class="si-btn" disabled>disabled</button>
+            <a class="si-btn si-btn--primary" href="#components">link button</a>
+          </div>
+
+          <h3>Chips &amp; badges</h3>
+          <div class="si-panel" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem">
+            <span class="si-chip">default</span>
+            <span class="si-chip si-chip--gold">gold emphasis</span>
+            <span class="si-chip si-chip--accent">telemetry</span>
+            <span class="si-chip si-chip--live">live</span>
+            <span class="si-chip si-chip--warn">warning</span>
+            <span class="si-chip si-chip--danger">danger</span>
+            <span class="si-badge">implemented</span>
+            <span class="si-badge si-badge--experimental">experimental</span>
+            <span class="si-badge si-badge--dev">in development</span>
+            <span class="si-badge si-badge--research">research</span>
+          </div>
+
+          <h3>Panels &amp; cards</h3>
+          <div class="si-grid" style="margin-bottom:1rem">
+            <div class="si-panel si-panel--glow">
+              <p class="si-metric__label">panel --glow</p>
+              <p style="margin:0.4rem 0 0">Gold border wash reserved for one highlighted surface
+              per view. The glow is barely-there: 14% alpha.</p>
+            </div>
+            <a class="si-card" href="#components">
+              <span class="si-card__dtype">document</span>
+              <span class="si-card__title">Typed v0.9 document card</span>
+              <span class="si-card__desc">Cards carry a dtype eyebrow in gold, ivory title, muted
+              description, and a mono meta footer.</span>
+              <span class="si-card__meta"><span>corpus</span><span>2026-09-01</span><span>sha256:pinned</span></span>
+            </a>
+            <div class="si-card">
+              <span class="si-card__dtype">research</span>
+              <span class="si-card__title">Research entry card</span>
+              <span class="si-card__desc">Research cards show approval provenance. Nothing renders
+              here without an approval gate.</span>
+              <span class="si-card__meta"><span>approved</span><span>osint</span><span>provenance</span></span>
+            </div>
+            <div class="si-card">
+              <span class="si-card__dtype">metric</span>
+              <div class="si-metric">
+                <span class="si-metric__value si-metric__value--accent">0.0</span>
+                <span class="si-metric__delta">no fabricated values — zero means zero</span>
+              </div>
+            </div>
+          </div>
+
+          <h3>Document list</h3>
+          <div class="si-doclist" style="margin-bottom:1rem">
+            <div class="si-doclist__item">
+              <span class="si-doclist__dtype">person</span>
+              <span class="si-doclist__title">Typed entity record with provenance metadata</span>
+              <span class="si-doclist__meta">corpus · 2026-09-04</span>
+            </div>
+            <div class="si-doclist__item">
+              <span class="si-doclist__dtype">claim</span>
+              <span class="si-doclist__title">Assertion bound to sources and evidence</span>
+              <span class="si-doclist__meta">corpus · 2026-09-02</span>
+            </div>
+            <div class="si-doclist__item">
+              <span class="si-doclist__dtype">evidence-record</span>
+              <span class="si-doclist__title">Captured artifact with content hash</span>
+              <span class="si-doclist__meta">corpus · 2026-08-30</span>
+            </div>
+          </div>
+
+          <h3>Code &amp; terminal</h3>
+          <div class="si-grid si-grid--2" style="margin-bottom:1rem">
+            <div class="si-codeblock">
+              <div class="si-codeblock__head"><span>lisp — gserver actor</span><span>exemplar</span></div>
+              <pre><code>(defun bind-document (doc)
+  "Validate against the pinned v0.9 schema."
+  (check-type doc starintel:document)
+  (values doc (schema:validate doc)))</code></pre>
+            </div>
+            <div class="si-terminal">
+              <div class="si-terminal__bar"><span class="dot"></span><span>verify — swipl</span></div>
+              <pre class="si-terminal__body"><span class="prompt">?-</span> verify_ci.
+PASS  v09_pinned
+PASS  radar_safe
+<span class="out">VERIFIED: all invariants hold.</span></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- States -->
+      <section class="si-band" id="states">
+        <div class="si-shell si-section">
+          <div class="si-section__head">
+            <h2 class="si-section__title">States</h2>
+            <span class="faint mono" style="font-size:0.8rem">status · empty · loading · alerts</span>
+          </div>
+          <div class="si-grid si-grid--2">
+            <div class="si-panel" style="display:flex;flex-direction:column;gap:0.7rem">
+              <span class="si-status si-status--ok"><span class="si-status__dot" aria-hidden="true"></span>ready</span>
+              <span class="si-status si-status--live"><span class="si-status__dot" aria-hidden="true"></span>live — streaming</span>
+              <span class="si-status si-status--warn"><span class="si-status__dot" aria-hidden="true"></span>degraded</span>
+              <span class="si-status si-status--err"><span class="si-status__dot" aria-hidden="true"></span>unreachable</span>
+              <span class="si-status"><span class="si-status__dot" aria-hidden="true"></span>idle</span>
+              <p class="faint" style="margin:0.3rem 0 0;font-size:0.8rem">Error state carries a crossmark glyph: not color-alone.</p>
+            </div>
+            <div class="si-panel" style="display:flex;flex-direction:column;gap:0.8rem">
+              <div class="si-empty">
+                <span class="si-empty__mark">(&#955;)</span>
+                <span class="si-empty__title">No public research published yet</span>
+                <span style="font-size:0.85rem">Publication is fail closed: documents appear only after an
+                explicit approval gate with recorded evidence.</span>
+              </div>
+              <div class="si-alert si-alert--warn">
+                <span class="si-alert__mark">▲</span>
+                <span><strong>warning.</strong> The upstream projection is degraded; showing cached
+                aggregates only.</span>
+              </div>
+              <div class="si-alert si-alert--err">
+                <span class="si-alert__mark">×</span>
+                <span><strong>error.</strong> Projection service unreachable. This surface recovers on
+                the next poll; no fake data is shown in the meantime.</span>
+              </div>
+              <div class="si-alert si-alert--info">
+                <span class="si-alert__mark">λ</span>
+                <span><strong>info.</strong> Descriptive UI — the numbers in this showcase are
+                illustrative, not telemetry.</span>
+              </div>
+              <div style="display:flex;gap:1rem;align-items:center">
+                <span class="si-spinner" role="status" aria-label="loading"></span>
+                <div class="si-skeleton" style="flex:1;height:0.9em"></div>
+              </div>
+              <div class="si-skeleton" style="height:0.9em;width:70%"></div>
+              <div class="si-skeleton" style="height:0.9em;width:45%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Forms -->
+      <section class="si-band" id="forms">
+        <div class="si-shell si-section">
+          <div class="si-section__head">
+            <h2 class="si-section__title">Forms</h2>
+            <span class="faint mono" style="font-size:0.8rem">mono inputs · gold focus</span>
+          </div>
+          <div class="si-grid si-grid--2">
+            <form class="si-panel" onsubmit="return false">
+              <div class="si-field">
+                <label class="si-field__label" for="f-query">query</label>
+                <input class="si-input" id="f-query" type="text" placeholder="dtype:claim AND dataset:osint" />
+              </div>
+              <div class="si-field">
+                <label class="si-field__label" for="f-scope">scope</label>
+                <select class="si-select" id="f-scope">
+                  <option>public projection</option>
+                  <option>operator corpus</option>
+                </select>
+              </div>
+              <div class="si-field">
+                <label class="si-field__label" for="f-notes">notes</label>
+                <textarea class="si-textarea" id="f-notes" rows="3" placeholder="provenance notes…"></textarea>
+              </div>
+              <button class="si-btn si-btn--primary" type="submit">submit</button>
+            </form>
+            <div class="si-panel">
+              <p class="si-metric__label">focus contract</p>
+              <p style="font-size:0.9rem;color:var(--si-text-secondary)">Tab into the fields: focus is a
+              2px gold outline with offset — themed via <span class="mono">--si-focus</span>, never removed.
+              Labels are explicit; placeholders are never the only label.</p>
+              <p class="si-metric__label" style="margin-top:1rem">reduced motion</p>
+              <p style="font-size:0.9rem;color:var(--si-text-secondary)">All animation (pulse, shimmer,
+              edge-flow) collapses to zero duration under
+              <span class="mono">prefers-reduced-motion</span>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Graphs -->
+      <section class="si-band" id="graphs">
+        <div class="si-shell si-section">
+          <div class="si-section__head">
+            <h2 class="si-section__title">Graph elements</h2>
+            <span class="faint mono" style="font-size:0.8rem">nodes · edges · relations</span>
+          </div>
+          <div class="si-grid si-grid--2">
+            <div class="si-graphframe">
+              <span class="si-graphframe__corner si-graphframe__corner--tl">fig. 02 — relation path</span>
+              <img src="/relation-path.svg" alt="Typed relation edge from a source node to a target node" />
+            </div>
+            <div class="si-graphframe">
+              <span class="si-graphframe__corner si-graphframe__corner--tl">fig. 03 — lambda mark</span>
+              <img src="/lambda-mark.svg" alt="Lambda glyph on a node ring" style="max-width:220px;margin:1rem auto" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="si-rule si-print-hide" />
+    </main>
+
+    <footer class="si-footer">
+      <div class="si-shell">
+        <span><span data-wordmark-sm></span> <span class="muted">— design system reference</span></span>
+        <span><a href="#tokens">tokens</a> · <a href="#components">components</a> · <a href="#states">states</a></span>
+      </div>
+    </footer>
+
+    <script type="module" src="./showcase.ts"></script>
+  </body>
+</html>

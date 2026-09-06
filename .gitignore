@@ -1,0 +1,8 @@
+node_modules/
+dist/
+examples/showcase/dist/
+*.tsbuildinfo
+result
+result-*
+.direnv/
+.DS_Store

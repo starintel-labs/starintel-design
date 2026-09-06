@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-09-06T17:20:22Z",
+  "facts_sha256": "f5b46d1f0f4c7e55e798bf487864b601e685ff48fb81ff9523d8870dba337a45",
+  "head": "no-git",
+  "reason": "verification passed",
+  "status": "pass",
+  "stderr_sha256": "3b6ceea88808ce9153ebefdd8fcada7a5f1a9e510b924bbb4144052e8b386019",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "swipl_exit": 0,
+  "verify_sha256": "a654b5a2b881eb1947072f519052ef1e41e0ec045ee4f26569563a795347cd74",
+  "worktree_digest": "62d46de0ef16a07627f2031cb9c0dfe50870ffbfc27dd8382d4bf34039c3b89f"
+}

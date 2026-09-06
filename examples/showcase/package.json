@@ -1,0 +1,22 @@
+{
+  "name": "@starintel/design-showcase",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Visual showcase of @starintel/design: the canonical reference for agents",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "true",
+    "lint": "true",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@starintel/design": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^7.0.0"
+  }
+}
