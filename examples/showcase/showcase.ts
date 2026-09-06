@@ -82,7 +82,7 @@ if (wrap) {
       row.style.cssText = "display:flex;align-items:center;gap:0.6rem;margin:0.3rem 0";
       const sw = document.createElement("span");
       const value = rootStyle.getPropertyValue(s.token).trim();
-      sw.style.cssText = `width:1.4rem;height:1.4rem;border-radius:3px;border:1px solid var(--si-border-strong);background:${s.token};flex:none`;
+      sw.style.cssText = `width:1.4rem;height:1.4rem;border-radius:3px;border:1px solid var(--si-border-strong);background:var(${s.token});flex:none`;
       const name = document.createElement("span");
       name.className = "mono";
       name.style.fontSize = "0.72rem";
